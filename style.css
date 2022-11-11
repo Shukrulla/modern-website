@@ -56,6 +56,7 @@ button{
     border: 0;
     outline: 0;
     cursor: pointer;
+    transition: background 0.5s;
 }
 
 button span{
@@ -65,6 +66,7 @@ button span{
     width: 26px;
     border-radius:50%;
     margin-left: 2px;
+    transition: background 0.5s, margin-left 0.5s;
 }
 
 .lamp-container {
@@ -80,10 +82,13 @@ button span{
 
 .light {
     position: absolute;
-    top: 100%;
-    left: 45%;
+    top: 97%;
+    left: 50%;
     transform: translateX(-50%);
-    width: 600px;   
+    width: 600px;
+    margin-left: -10px;
+    opacity: 0; 
+    transition:opacity 0.5s;
 }
 
 .text-container {
@@ -130,4 +135,17 @@ button span{
     border-radius:4px;
     background:#00986f;
     display: block;
+}
+
+.active {
+    background:green;
+}
+
+.active span {
+    background:#fff;
+    margin-left: 31px;
+}
+
+.on{
+    opacity: 1;
 }
